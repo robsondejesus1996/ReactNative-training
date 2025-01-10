@@ -74,14 +74,39 @@
 // });
 
 
-import { StyleSheet, Text, View } from "react-native";
+// import { StyleSheet, Text, View } from "react-native";
 
-const name = 'Robson'
+// const name = 'Robson'
 
-export default function HomeScreen(){
+// export default function HomeScreen(){
+//   return (
+//     <View style={styles.container}>
+//       <Text>Hello World! {name} </Text>
+//     </View>
+//   )
+// }
+
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1, 
+//     backgroundColor: '#fff', 
+//     alignItems: 'center', 
+//     justifyContent: 'center',
+//     padding: 10,
+//   }
+// })
+
+
+import React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+
+
+export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello World! {name} </Text>
+      <Text style={styles.eventName}>Nome do evento</Text>
+      <Text style={styles.eventDate}>Sexta, 1 de janeiro de 2025</Text>
     </View>
   )
 }
@@ -89,10 +114,20 @@ export default function HomeScreen(){
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
-    backgroundColor: 'blue', 
-    alignItems: 'center', 
-    justifyContent: 'center',
-    padding: 10,
+    flex: 1,
+    backgroundColor: '#131016',
+    padding: 24
+  },
+
+  eventName: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginTop: 48
+  },
+
+  eventDate: {
+    color: '#fff',
+    fontSize: 16
   }
-})
+});
